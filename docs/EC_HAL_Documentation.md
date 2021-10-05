@@ -4,7 +4,7 @@ description: EC_HAL API
 
 # Embedded Controller HAL
 
-Written by:  Your Name
+Written by:  Yejin Kim
 
 
 
@@ -110,6 +110,37 @@ void GPIO_init(GPIO_TypeDef *Port, int pin, int mode);
 
 ```c++
 GPIO_mode(GPIOA, 5, OUTPUT);
+```
+
+
+
+### GPIO_pupdr\(\)
+
+Configures  GPIO pin modes: In/Out/AF/Analog
+
+```c++
+void GPIO_pupdr(GPIO_TypeDef *Port, int pin, int pupd);
+```
+
+**Parameters**
+
+* **Port:**  Port Number,  GPIOA~GPIOH
+
+* **pin**:  pin number (int) 0~15
+
+* **pupd**:   No pullup pulldown(0), pull-up(1), pull-down(2), ...
+
+**Example code**
+
+```c++
+GPIO_pupdr(GPIOA, 5, 0);	// 0: No PUPD
+```
+
+
+
+```c++
+void main
+
 ```
 
 
